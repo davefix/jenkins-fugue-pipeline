@@ -1,3 +1,5 @@
+@Library('jenkins-libraries@dev')_
+
 pipeline {
 
 	agent any
@@ -16,20 +18,8 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo "Building ..."	
+     			fugueScan ('jenkins-fugue-pipeline', 'dev')				
 			}
 		}
-	
-		stage('Test') {
-			steps {
-				echo "Testing ..."	
-			}
-		}
-
-		stage('Deploy') {
-			steps {
-				echo "Deploying ..."	
-			}
-		}	
-
 	} 
 }
