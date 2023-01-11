@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo "Building ..."	
-     			fugueScan ('jenkins-fugue-pipeline', 'prod')				
+     			fugueScan ('jenkins-fugue-pipeline', 'main')				
 			}
 		}
 	} 
