@@ -9,7 +9,7 @@ pipeline {
 		stage('Checkout') {
 			steps {		
                 sh '''
-				    echo "Checking out ...."	                											
+				    echo "Checking out ..."	                											
                     ls -lah
                 '''
 			}
@@ -17,7 +17,7 @@ pipeline {
 
 		stage('Build') {
 			steps {
-				echo "Building ...."	
+				echo "Building ..."	
      			fugueScan ('jenkins-fugue-pipeline', 'dev')				
 			}
 		}
